@@ -1,12 +1,5 @@
 # SaveNotes
 
-BackEnd: Ajax, JavaScript, Laravel, Xampp
-Deploy: Heroku
-Descrição: Aplicação simples de gerenciamento de notas, contendo um sistema de usuário para ligar as anotações.
-FrontEnd: BootStrap4, CSS, Figma, HTML
-Image: https://www.notion.so/66ccf8e5691540b0aee65a39f0b240e7
-Linguagens: PHP
-Status: Stand By
 
 ## 🧩BackEnd
 
