@@ -46,10 +46,6 @@ Status: Stand By
 
 [DesignSoftware](https://www.figma.com/file/WA9mSJKlqog21MU3CuditW/DesignSoftware?node-id=0%3A1)
 
-[DesignSoftware.fig](SaveNotes%203af5ad1ac69e44198c9ced6f88006699/DesignSoftware.fig)
-
-[DesignSoftware_compressed.pdf](SaveNotes%203af5ad1ac69e44198c9ced6f88006699/DesignSoftware_compressed.pdf)
-
 ## 😎Resources
 
 [Google Fonts](https://fonts.google.com/specimen/Gemunu+Libre?preview.text=anotação%20de%20sei%20lá%20oquê&preview.text_type=custom)
