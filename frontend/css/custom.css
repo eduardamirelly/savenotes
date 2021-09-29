@@ -99,7 +99,7 @@ header nav div:nth-child(2){
     grid-template-columns: repeat(4, 1fr);
     width: 70%;
     grid-row-gap: 20px;
-    margin: 50px 0px;
+    margin: 70px 0px;
 }
 
 #section-03 #tecnologies img{
