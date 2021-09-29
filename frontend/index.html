@@ -8,43 +8,47 @@
     <link rel="icon" href="./images/post-it.png">
 
     <!-- CSS MAIN -->
-    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/main.css">
 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
 </head>
 <body>
     
     <!-- CONTENT INDEX -->
 
-    <div>
+    <div class="content display-flex flex-direction-column align-items-center justify-content-between">
 
         <!-- HEADER -->
 
         <header>
-            <div>
-                <nav>
-                    <ul>
-                        <li>SaveNoter</li>
-                        <li>Login</li>
-                        <li>About</li>
+            <nav class="display-flex align-items-center justify-content-between">
+                <div>
+                    <h1 id="savenote"><img src="./images/post-it.png" alt="post-it" width="20px">SaveNoter</h1>
+                </div>
+                <div>
+                    <ul class="display-flex align-items-center justify-content-between">
+                        <li><a href="#"><img src="./images/user.png" alt="user">Login</a></li>
+                        <li><a href="#"><img src="./images/info.png" alt="info">About</a></li>
                     </ul>
-                </nav> 
-            </div>
+                </div>
+            </nav>
         </header>
 
         <!-- END HEADER -->
 
         <!-- SECTION 01 -->
 
-        <section>
-            <div>
+        <section id="section-01">
+            <div class="display-flex flex-direction-column justify-content-center align-items-center">
                 <div>
                     <h2>Crie suas notas aqui!</h2>
                     <h4>Cadastre-se já!</h4>
                 </div>
-                <div>
-                    <img src="./images/arrow.gif" alt="arrow" width="400px">
-                    <img src="./images/paper_notes.png" alt="paper_notes" width="400px">
-                    <img src="./images/arrow.gif" alt="arrow" width="400px">
+                <div class="display-flex align-items-center">
+                    <img id="img_gif" src="./images/arrow.gif" alt="arrow">
+                    <img id="img_paper_notes" src="./images/paper_notes.png" alt="paper_notes" width="200px">
+                    <img id="img_gif" src="./images/arrow.gif" alt="arrow">
                 </div>
             </div>
         </section>
@@ -53,15 +57,15 @@
 
         <!-- SECTION 02 -->
 
-        <section>
-            <div>
+        <section id="section-02">
+            <div class="display-flex align-items-center justify-content-around">
                 <div>
-                    <img src="./images/idea.png" alt="idea" width="300px">
+                    <img id="img_idea" src="./images/idea.png" alt="idea">
                 </div>
-                <div>
+                <div class="display-flex flex-direction-column align-items-center justify-content-center" id="idea_text">
                     <h2>Gerenciador de anotações</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla erat magna, congue ut ligula ut, ultricies ultricies massa. Donec imperdiet eleifend lacus. Integer sed lacus nunc. Duis hendrerit ipsum in nunc varius, et dictum arcu, et finibus ex fermentum. Phasellus tempor ligula vitae.</p>
-                    <a href="#">Registre-se Agora</a>
+                    <a class="button-green" href="#">Registre-se Agora</a>
                 </div>
             </div>
         </section> 
@@ -70,45 +74,44 @@
 
         <!-- SECTION 03 -->
 
-        <section>
-            <div>
+        <section id="section-03">
+            <div class="display-flex flex-direction-column align-items-center justify-content-center">
                 <div>
                     <h2>Tecnologias utilizadas</h2>
                 </div>
-                <div>
-                    <div>Circle</div>
-                    <div>Circle</div>
-                    <div>Circle</div>
-                    <div>Circle</div>
-                    <div>Circle</div>
-                    <div>Circle</div>
-                    <div>Circle</div>
-                    <div>Circle</div>
+                <div id="tecnologies">
+                    <div><img src="./images/github.png" alt="image"></div>
+                    <div><img src="./images/github.png" alt="image"></div>
+                    <div><img src="./images/github.png" alt="image"></div>
+                    <div><img src="./images/github.png" alt="image"></div>
+                    <div><img src="./images/github.png" alt="image"></div>
+                    <div><img src="./images/github.png" alt="image"></div>
+                    <div><img src="./images/github.png" alt="image"></div>
+                    <div><img src="./images/github.png" alt="image"></div>
                 </div>
             </div>
         </section>
 
         <!-- END SECTION 03 -->
 
-        <!-- FOOTER -->
-
-        <footer>
-            <div>
-                <div>
-                    <p>&copy;2021 SaveNotes</p>
-                    <p>Desenvolvido por Eduarda Mirelly</p>
-                    <p>Project Open Source</p>
-                    <p>Disponível em:</p>
-                    <a href="#"><img src="./images/github.png" alt="image-github" width="100px"></a>
-                </div>
-            </div>
-        </footer>
-
-        <!-- END FOOTER -->
-
     </div>
     
     <!-- END CONTENT INDEX -->
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div class="display-flex align-items-center justify-content-center">
+            <div class="display-flex flex-direction-column align-items-center">
+                <p>&copy;2021 SaveNotes</p>
+                <p>Desenvolvido por Eduarda Mirelly</p>
+                <p>Project Open Source <br> Disponível em:</p>
+                <a href="#"><img src="./images/github.png" alt="image-github" width="100px"></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- END FOOTER -->
 
 </body>
 </html>
