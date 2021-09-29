@@ -1,0 +1,14 @@
+/* COLOR PALETTE */
+
+:root{
+    --light-yellow: #FFF9DE;
+    --dark-light-yellow: #E0D9BC;
+    --light-aquamarine:#80BAA6;
+    --medium-aquamarine: #49877C;
+    --dark-aquamarine: #32635F;
+    --dark-green: #395F49;
+    --medium-green: #198274;
+    --yellow: #F4CC38;
+    --orange: #CE6045;
+    --darken-green: #263532;
+}
