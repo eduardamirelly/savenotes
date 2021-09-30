@@ -2,10 +2,34 @@
 
 @media screen and (max-width: 600px){
     /* HEADER MENU */
-    header nav div:nth-child(2){
-        display: none;
+    header nav #menu{
+        position: fixed;
+        top: 0%;
+        left: 100%;
+        background-color: var(--dark-aquamarine);
+        height: 100%;
+        width: 60%;
+        z-index: 1;
+        padding: 8rem 5%;
+        opacity: 0.9;
+    }
+    header nav #menu ul{
+        flex-direction: column;
+    }
+    header nav ul li{
+        width: 100%;
+        text-align: center;
+    }
+    header nav ul li:nth-child(2){
+        margin: 0;
+        margin-top: 20px;
     }
     header nav div:nth-child(3){
         display: block;
     }
+    header nav div:nth-child(3) #button-close{
+        position: fixed;
+        z-index: 2;
+    }
+
 }

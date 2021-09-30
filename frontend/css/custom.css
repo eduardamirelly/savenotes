@@ -28,11 +28,12 @@
     width: 2rem;
 }
 
-#button-open{
-    background-color: none;
+#button-open, #button-close{
+    background-color: transparent;
+    cursor: pointer;
 }
 
-#button-open img{
+#button-open img, #button-close img{
     width: 2rem;
 }
 
@@ -103,7 +104,7 @@
 }
 
 #section-03 #tecnologies img{
-    width: 10rem;
+    width: 10vw;
 }
 
 /* FOOTER INDEX CUSTOM */

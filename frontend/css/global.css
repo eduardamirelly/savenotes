@@ -6,6 +6,7 @@
     border: 0;
     font-family: 'Poppins', sans-serif;
     color: var(--darken-green);
+    box-sizing: border-box;
 }
 
 body{
@@ -71,10 +72,6 @@ ul{
 
 header{
     margin-top: 50px;
-}
-
-header nav div{
-    width: 50%;
 }
 
 header nav div:nth-child(3){
