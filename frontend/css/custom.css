@@ -25,15 +25,15 @@
 }
 
 #savenote img{
-    width: 2vw;
+    width: 2rem;
 }
 
-header nav div:nth-child(1){
-    flex-grow: 10;
+#button-open{
+    background-color: none;
 }
 
-header nav div:nth-child(2){
-    flex-grow: .3;
+#button-open img{
+    width: 2rem;
 }
 
 /* SECTIONS CUSTOM */
@@ -57,7 +57,7 @@ header nav div:nth-child(2){
 }
 
 #section-01 #img_paper_notes, #section-01 #img_gif{
-    width: 27vw;
+    width: 28vw;
 }
 
 #section-01 #img_gif:nth-child(3){
@@ -103,7 +103,7 @@ header nav div:nth-child(2){
 }
 
 #section-03 #tecnologies img{
-    width: 10vw;
+    width: 10rem;
 }
 
 /* FOOTER INDEX CUSTOM */

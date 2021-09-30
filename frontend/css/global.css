@@ -9,7 +9,11 @@
 }
 
 body{
+    width: 100%;
     background-color: var(--light-yellow);
+}
+
+.content{
     padding: 0% 8%;
 }
 
@@ -29,10 +33,6 @@ ul{
 
 .display-flex{
     display: flex;
-}
-
-.flex-wrap{
-    flex-wrap: wrap;
 }
 
 .flex-direction-column{
@@ -73,6 +73,18 @@ header{
     margin-top: 50px;
 }
 
+header nav div{
+    width: 50%;
+}
+
+header nav div:nth-child(3){
+    display: none;
+}
+
+header nav div:nth-child(3) #button-close{
+    display: none;
+}
+
 header nav ul li a{
     font-size: 1.25rem;
     font-weight: 300;
@@ -86,7 +98,11 @@ header nav ul li a:hover{
 header nav ul li img, #savenote img{
     margin-right: 10px;
     object-fit: cover;
-    width: 1.5vw;
+    width: 1.5rem;
+}
+
+header nav ul li:nth-child(2){
+    margin-left: 25px;
 }
 
 /* SECTIONS CLASSES GLOBAL */
