@@ -133,6 +133,29 @@ section h2{
 
 /* INPUTS CLASSES GLOBAL */
 
+.content-center .form-input form{
+    width: 100%;
+}
+
+.content-center .form-input form h2{
+    color: var(--light-yellow);
+}
+
+.content-center .form-input p{
+    margin-top: 10px;
+    color: var(--medium-aquamarine);
+    font-size: .9rem;
+}
+
+.content-center .form-input p a{
+    color: var(--light-yellow);
+    text-transform: uppercase;
+}
+
+.content-center .form-input p a:hover{
+    color: var(--dark-light-yellow);
+}
+
 .input-digit{
     padding: 15px;
     width: 100%;
@@ -140,7 +163,7 @@ section h2{
     background-color: var(--dark-light-yellow);
     color: var(--medium-aquamarine);
     font-weight: 400;
-    font-size: .9rem;
+    font-size: .88rem;
 }
 
 .input-digit::placeholder{
@@ -155,4 +178,5 @@ section h2{
 .button-input{
     padding: 4% 13%;
     font-size: 1rem;
+    margin-bottom: 15px;
 }

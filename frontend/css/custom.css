@@ -142,36 +142,14 @@ footer p:nth-child(3){
 }
 
 .content-center div div:nth-child(1) img{
-    width: 32vw;
-    height: 80vh;
+    width: 33vw;
+    height: 600px;
 }
 
 .content-center .form-input{
-    width: 32vw;
-    height: 80vh;
+    width: 33vw;
+    height: 600px;
     background-color: var(--darken-green);
     padding: 0px 40px;
 }
 
-.content-center .form-input form{
-    width: 100%;
-}
-
-.content-center .form-input form h2{
-    color: var(--light-yellow);
-}
-
-.content-center .form-input p{
-    margin-top: 10px;
-    color: var(--medium-aquamarine);
-    font-size: .9rem;
-}
-
-.content-center .form-input p a{
-    color: var(--light-yellow);
-    text-transform: uppercase;
-}
-
-.content-center .form-input p a:hover{
-    color: var(--dark-light-yellow);
-}

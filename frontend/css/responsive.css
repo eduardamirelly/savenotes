@@ -8,6 +8,11 @@
     #section-03 #tecnologies img{
         width: 13vw;
     }
+
+    /* LOGIN */
+    .content-center div div:nth-child(1) img, .content-center .form-input{
+        width: 38vw;
+    }
 }
 
 @media screen and (max-width: 1050px){
@@ -22,6 +27,21 @@
     }
     #section-03 #tecnologies img{
         width: 15vw;
+    }
+
+    /* LOGIN */
+    .content-center div div:nth-child(1) img, .content-center .form-input{
+        width: 46vw;
+    }
+}
+
+@media screen and (max-width: 850px){
+    /* LOGIN */
+    .content-center div div:nth-child(1) img{
+        display: none;
+    }
+    .content-center .form-input{
+        width: 60vw;
     }
 }
 
@@ -100,6 +120,11 @@
     #section-03 #tecnologies img{
         width: 18vw;
     }
+
+    /* LOGIN */
+    .content-center .form-input{
+        width: 75vw;
+    }
 }
 
 @media screen and (max-width: 500px){
@@ -116,5 +141,23 @@
     }
     #section-03 #tecnologies img{
         width: 25vw;
+    }
+
+    /* LOGIN */
+    .content-center .form-input{
+        width: 90vw;
+        padding: 0px 30px;
+    }
+}
+
+
+@media screen and (max-height: 650px){
+    /* LOGIN */
+    .content-center{
+    }
+    .content-center .form-input{
+        position: absolute;
+        top: 20px;
+        margin: 15px;
     }
 }
