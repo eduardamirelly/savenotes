@@ -37,6 +37,15 @@
     width: 2rem;
 }
 
+#name_menu{
+    display: none;
+    margin-left: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: var(--dark-light-yellow);
+}
+
 /* SECTIONS CUSTOM */
 
 #section-02, #section-03{
@@ -89,7 +98,7 @@
 /* SECTION 03 CUSTOM */
 
 #section-03{
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 
 #section-03 #tecnologies{

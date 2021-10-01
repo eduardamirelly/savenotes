@@ -1,12 +1,50 @@
 /* MEDIA QUERYS */
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 1250px){
+    /* SECTION 03 */
+    #section-03 #tecnologies{
+        width: 80%;
+    }
+    #section-03 #tecnologies img{
+        width: 13vw;
+    }
+}
+
+@media screen and (max-width: 1050px){
+    /* SECTION 02 */
+    #section-02 #img_idea{
+        width: 35vw;
+    }
+
+    /* SECTION 03 */
+    #section-03 #tecnologies{
+        width: 90%;
+    }
+    #section-03 #tecnologies img{
+        width: 15vw;
+    }
+}
+
+@media screen and (max-width: 800px){
+    /* SECTION 02 */
+    #section-02 #img_idea{
+        width: 40vw;
+    }
+    #section-02 #idea_text h2{
+        font-size: 1.5rem;
+    }
+    #section-02 #idea_text p{
+        font-size: .9rem;
+    }
+}
+
+@media screen and (max-width: 650px){
     /* HEADER MENU */
     header nav #menu{
         position: fixed;
         top: 0%;
-        left: 100%;
-        background-color: var(--dark-aquamarine);
+        left: -100%;
+        background-color: var(--darken-green);
         height: 100%;
         width: 60%;
         z-index: 1;
@@ -15,14 +53,20 @@
     }
     header nav #menu ul{
         flex-direction: column;
+        align-items: flex-start;
     }
     header nav ul li{
-        width: 100%;
-        text-align: center;
+        width: 90%;
+        text-align: start;
+        margin-left: 10px !important;
+        border-top: var(--dark-light-yellow) 1px solid;
+        padding-top: 10px;
     }
     header nav ul li:nth-child(2){
         margin: 0;
-        margin-top: 20px;
+        margin-top: 10px;
+        border-bottom: var(--dark-light-yellow) 1px solid;
+        padding-bottom: 10px;
     }
     header nav div:nth-child(3){
         display: block;
@@ -31,5 +75,46 @@
         position: fixed;
         z-index: 2;
     }
+    #name_menu{
+        display: block;
+    }
 
+    /* SECTION 02 */
+    #section-02 div:nth-child(1){
+        flex-direction: column;
+        justify-content: center;
+    }
+    #section-02 #idea_text{
+        margin-top: 60px;
+        width: 100%;
+    }
+    #section-02 #idea_text h2{
+        font-size: 1.8rem;
+    }
+
+    /* SECTION 03 */
+    #section-03 #tecnologies{
+        width: 80%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #section-03 #tecnologies img{
+        width: 18vw;
+    }
+}
+
+@media screen and (max-width: 500px){
+    /* HEADER MENU */
+    header nav #menu{
+        width: 70%;
+    }
+
+    /* SECTION 03 */
+    #section-03 #tecnologies{
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 50px 0px;
+    }
+    #section-03 #tecnologies img{
+        width: 25vw;
+    }
 }
