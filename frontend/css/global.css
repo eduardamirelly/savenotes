@@ -18,6 +18,11 @@ body{
     padding: 0% 8%;
 }
 
+.content-center{
+    width: 100vw;
+    height: 100vh;
+}
+
 header, section, footer{
     width: 100%;
 }
@@ -28,6 +33,10 @@ a{
 
 ul{
     list-style: none;
+}
+
+img{
+    object-fit: cover;
 }
 
 /* CLASSES GLOBAL FLEX BOX */
@@ -94,7 +103,6 @@ header nav ul li a:hover{
 
 header nav ul li img, #savenote img{
     margin-right: 10px;
-    object-fit: cover;
     width: 1.5rem;
 }
 
@@ -116,8 +124,35 @@ section h2{
     background-color: var(--medium-aquamarine);
     color: var(--light-yellow);
     padding: 2.5% 8%;
+    cursor: pointer;
 }
 
 .button-green:hover{
     background-color: var(--dark-aquamarine);
+}
+
+/* INPUTS CLASSES GLOBAL */
+
+.input-digit{
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: var(--dark-light-yellow);
+    color: var(--medium-aquamarine);
+    font-weight: 400;
+    font-size: .9rem;
+}
+
+.input-digit::placeholder{
+    color: var(--medium-aquamarine);
+    font-weight: 400;
+}
+
+.input-digit:focus{
+    outline: var(--light-yellow) 2px solid;
+}
+
+.button-input{
+    padding: 4% 13%;
+    font-size: 1rem;
 }

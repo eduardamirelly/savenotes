@@ -4,15 +4,15 @@
     font-weight: 200;
 }
 
-#section-01 h4{
+#section-01 h4, .content-center .form-input p{
     font-weight: 300;
 }
 
-#savenote{
+#savenote, .content-center .form-input p a{
     font-weight: 400;
 }
 
-#section-01 h2, #section-02 #idea_text h2, .button-green{
+#section-01 h2, #section-02 #idea_text h2, .button-green, .content-center div div:nth-child(1) h2{
     font-weight: 600;
 }
 
@@ -132,4 +132,46 @@ footer p{
 
 footer p:nth-child(3){
     font-size: .8rem;
+}
+
+/* LOGIN CUSTOM */
+
+.content-center div div:nth-child(1) h2{
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.content-center div div:nth-child(1) img{
+    width: 32vw;
+    height: 80vh;
+}
+
+.content-center .form-input{
+    width: 32vw;
+    height: 80vh;
+    background-color: var(--darken-green);
+    padding: 0px 40px;
+}
+
+.content-center .form-input form{
+    width: 100%;
+}
+
+.content-center .form-input form h2{
+    color: var(--light-yellow);
+}
+
+.content-center .form-input p{
+    margin-top: 10px;
+    color: var(--medium-aquamarine);
+    font-size: .9rem;
+}
+
+.content-center .form-input p a{
+    color: var(--light-yellow);
+    text-transform: uppercase;
+}
+
+.content-center .form-input p a:hover{
+    color: var(--dark-light-yellow);
 }
