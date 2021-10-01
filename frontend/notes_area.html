@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SaveNotes | Register</title>
+    <title>SaveNotes | Notas</title>
     <link rel="icon" href="./images/post-it.png">
 
     <!-- CSS MAIN -->
@@ -14,32 +14,46 @@
 
     <!-- CONTENT NOTES AREA -->
 
+    <div class="content display-flex flex-direction-column align-items-center justify-content-between">
+
         <!-- HEADER -->
 
-        <header>
-            <div>
-                <nav>
-                    <ul>
-                        <li>SaveNoter</li>
-                        <li>username</li>
-                    </ul>
-                    <ul>
-                        <li><input type="search" name="search" placeholder="Buscar"></li>
-                        <li>
-                            <select name="marks-select">
-                                <optgroup>
-                                    <option value="0" selected>Marcadores</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                </optgroup>
-                            </select>
-                        </li>
-                        <li><a href="#"><img src="./images/plus.png" alt="plus" width="20px">Nota</a></li>
-                        <li><a href="#"><img src="./images/plus.png" alt="plus" width="20px">Marcador</a></li>
-                    </ul>
-                </nav> 
-            </div>
+        <header class="display-flex justify-content-center">
+            <nav class="navbar display-flex flex-direction-column align-items-center justify-content-center">
+                <div id="navbar-header" class="display-flex align-items-center justify-content-between">
+                    <div>
+                        <h1 id="savenote"><img src="./images/post-it.png" alt="post-it">SaveNotes</h1>
+                    </div>
+                    <div id="menu">
+                        <div id="name_menu">Menu</div>
+                        <ul class="display-flex align-items-center justify-content-end">
+                            <li><a href="#"><img src="./images/user.png" alt="user">User</a></li>
+                            <li><a href="#"><img src="./images/logout.png" alt="user">Logout</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu-bar">
+                        <div class="display-flex align-items-center justify-content-end">
+                            <button type="button" id="button-open" onclick="openMenu()"><img src="./images/menu.png" alt="menu"></button>
+                            <button type="button" id="button-close" onclick="closeMenu()"><img src="./images/close.png" alt="close"></button>
+                        </div>
+                    </div>
+                </div>
+                <ul id="navbar-body" class="display-flex align-items-center justify-content-between">
+                    <li><input type="search" name="search" placeholder="Buscar"></li>
+                    <li>
+                        <select id="marks-select">
+                            <optgroup>
+                                <option value="0" selected>Marcadores</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </optgroup>
+                        </select>
+                    </li>
+                    <li><a href="#"><img src="./images/plus.png" alt="plus" width="20px">Nota</a></li>
+                    <li><a href="#"><img src="./images/plus.png" alt="plus" width="20px">Marcador</a></li>
+                </ul>
+            </nav> 
         </header>
 
         <!-- END HEADER -->
@@ -90,7 +104,31 @@
 
         <!-- END NOTES -->
 
+    </div>
+
     <!-- END NOTES AREA -->
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+        var menu = document.getElementById('menu');
+        var porcent_left = menu.style.left;
+        var button_menu_open = document.querySelector('#button-open');
+        var button_menu_close = document.querySelector('#button-close');
+
+        function openMenu(){
+            menu.style.left = '0%';
+            menu.style.transition = '0.5s';
+            button_menu_open.style.display = 'none';
+            button_menu_close.style.display = 'block';
+        }
+
+        function closeMenu(){
+            menu.style.left = porcent_left;
+            button_menu_close.style.display = 'none';
+            button_menu_open.style.display = 'block';
+        }
+    </script>
 
 </body>
 </html>

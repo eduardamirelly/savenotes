@@ -77,14 +77,14 @@
         flex-direction: column;
         align-items: flex-start;
     }
-    header nav ul li{
+    header nav #menu ul li{
         width: 90%;
         text-align: start;
         margin-left: 10px !important;
         border-top: var(--dark-light-yellow) 1px solid;
         padding-top: 10px;
     }
-    header nav ul li:nth-child(2){
+    header nav #menu ul li:nth-child(2){
         margin: 0;
         margin-top: 10px;
         border-bottom: var(--dark-light-yellow) 1px solid;

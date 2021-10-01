@@ -134,7 +134,7 @@ footer p:nth-child(3){
     font-size: .8rem;
 }
 
-/* LOGIN CUSTOM */
+/* LOGIN AND REGISTER CUSTOM */
 
 .content-center div div:nth-child(1) h2{
     margin-bottom: 20px;
@@ -153,3 +153,72 @@ footer p:nth-child(3){
     padding: 0px 40px;
 }
 
+/* NOTES AREA CUSTOM */
+
+.navbar{
+    width: 100%;
+}
+
+.navbar #navbar-header, .navbar #navbar-body{
+    width: 100%;
+}
+
+.navbar #navbar-body{
+    margin-top: 40px;
+}
+
+.navbar #navbar-body li:nth-child(1){
+    width: 55%;
+}
+
+.navbar #navbar-body li{
+    text-align: center;
+    width: 15%;
+}
+
+.navbar #navbar-body input[type="search"]{
+    font-weight: 600;
+    font-size: 1rem;
+    background-color: var(--dark-light-yellow);
+    width: 100%;
+    border-radius: 20px;
+    padding: 11px 20px;
+}
+
+.navbar #navbar-body input[type="search"]::placeholder{
+    color: var(--light-yellow);
+}
+
+.navbar #navbar-body #marks-select{
+    width: 80%;
+    padding: 11px 20px;
+    font-weight: 600;
+    color: var(--light-yellow);
+    background-color: var(--dark-light-yellow);
+    border-radius: 20px;
+}
+
+.navbar #navbar-body #marks-select:focus, .navbar #navbar-body input[type="search"]:focus{
+    outline: none;
+}
+
+.navbar #navbar-body li a{
+    background-color: var(--light-aquamarine);
+    color: var(--light-yellow);
+    padding: 11px 25px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar #navbar-body li:nth-child(3) a{
+    width: 80%;
+}
+
+.navbar #navbar-body li:nth-child(4) a{
+    width: 100%;
+}
+
+.navbar #navbar-body li a img{
+    width: 1.5rem;
+}
