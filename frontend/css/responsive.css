@@ -1,4 +1,6 @@
-/* MEDIA QUERYS */
+/* MEDIA QUERIES */
+
+/* MEDIA QUERIES WIDTH */
 
 @media screen and (max-width: 1250px){
     /* SECTION 03 */
@@ -7,6 +9,11 @@
     }
     #section-03 #tecnologies img{
         width: 13vw;
+    }
+
+    /* LOGIN */
+    .content-center div #img-input img, .content-center .form-input{
+        width: 38vw;
     }
 }
 
@@ -22,6 +29,21 @@
     }
     #section-03 #tecnologies img{
         width: 15vw;
+    }
+
+    /* LOGIN */
+    .content-center div #img-input img, .content-center .form-input{
+        width: 46vw;
+    }
+}
+
+@media screen and (max-width: 850px){
+    /* LOGIN */
+    .content-center div #img-input img{
+        display: none;
+    }
+    .content-center .form-input{
+        width: 60vw;
     }
 }
 
@@ -100,6 +122,11 @@
     #section-03 #tecnologies img{
         width: 18vw;
     }
+
+    /* LOGIN */
+    .content-center .form-input{
+        width: 75vw;
+    }
 }
 
 @media screen and (max-width: 500px){
@@ -116,5 +143,21 @@
     }
     #section-03 #tecnologies img{
         width: 25vw;
+    }
+
+    /* LOGIN */
+    .content-center .form-input{
+        width: 90vw;
+        padding: 0px 30px;
+    }
+}
+
+
+/* MEDIA QUERIES HEIGHT */
+
+@media screen and (max-height: 650px){
+    /* LOGIN */
+    .content-center{
+        height: 42rem;
     }
 }

@@ -4,15 +4,15 @@
     font-weight: 200;
 }
 
-#section-01 h4{
+#section-01 h4, .content-center .form-input p{
     font-weight: 300;
 }
 
-#savenote{
+#savenote, .content-center .form-input p a{
     font-weight: 400;
 }
 
-#section-01 h2, #section-02 #idea_text h2, .button-green{
+#section-01 h2, #section-02 #idea_text h2, .button-green, .content-center div div:nth-child(1) h2{
     font-weight: 600;
 }
 
@@ -133,3 +133,23 @@ footer p{
 footer p:nth-child(3){
     font-size: .8rem;
 }
+
+/* LOGIN CUSTOM */
+
+.content-center div div:nth-child(1) h2{
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.content-center div #img-input img{
+    width: 33vw;
+    height: 600px;
+}
+
+.content-center .form-input{
+    width: 33vw;
+    height: 600px;
+    background-color: var(--darken-green);
+    padding: 0px 40px;
+}
+
