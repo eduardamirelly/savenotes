@@ -1,4 +1,6 @@
-/* MEDIA QUERYS */
+/* MEDIA QUERIES */
+
+/* MEDIA QUERIES WIDTH */
 
 @media screen and (max-width: 1250px){
     /* SECTION 03 */
@@ -151,13 +153,11 @@
 }
 
 
+/* MEDIA QUERIES HEIGHT */
+
 @media screen and (max-height: 650px){
     /* LOGIN */
     .content-center{
-    }
-    .content-center .form-input{
-        position: absolute;
-        top: 20px;
-        margin: 15px;
+        height: 42rem;
     }
 }
