@@ -12,7 +12,7 @@
     }
 
     /* LOGIN */
-    .content-center div div:nth-child(1) img, .content-center .form-input{
+    .content-center div #img-input img, .content-center .form-input{
         width: 38vw;
     }
 }
@@ -32,14 +32,14 @@
     }
 
     /* LOGIN */
-    .content-center div div:nth-child(1) img, .content-center .form-input{
+    .content-center div #img-input img, .content-center .form-input{
         width: 46vw;
     }
 }
 
 @media screen and (max-width: 850px){
     /* LOGIN */
-    .content-center div div:nth-child(1) img{
+    .content-center div #img-input img{
         display: none;
     }
     .content-center .form-input{

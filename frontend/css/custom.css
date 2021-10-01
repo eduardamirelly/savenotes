@@ -141,7 +141,7 @@ footer p:nth-child(3){
     font-size: 2rem;
 }
 
-.content-center div div:nth-child(1) img{
+.content-center div #img-input img{
     width: 33vw;
     height: 600px;
 }
