@@ -180,3 +180,21 @@ section h2{
     font-size: 1rem;
     margin-bottom: 15px;
 }
+
+/* BACKGROUNDS COLORS NOTES */
+
+.dark-green{
+    background-color: var(--dark-green);
+}
+
+.medium-green{
+    background-color: var(--medium-green);
+}
+
+.yellow{
+    background-color: var(--yellow);
+}
+
+.orange{
+    background-color: var(--orange);
+}
