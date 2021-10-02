@@ -106,7 +106,7 @@ header nav ul li img, #savenote img{
     width: 1.2rem;
 }
 
-header nav ul li:nth-child(2){
+header nav #menu ul li:nth-child(2){
     margin-left: 25px;
 }
 
