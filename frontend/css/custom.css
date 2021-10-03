@@ -165,13 +165,13 @@ footer p:nth-child(3){
 
 .navbar #navbar-body{
     margin-top: 40px;
-    /* width: 100%; */
+    width: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.navbar #navbar-body div:nth-child(2) li:nth-child(2){
-    margin-left: 15px;
+.navbar #navbar-body #div-plus li:nth-child(1){
+    margin: 0px 15px;
 }
 
 .navbar #navbar-body li{
@@ -188,14 +188,14 @@ footer p:nth-child(3){
     border-radius: 16px;
 }
 
-.navbar #navbar-body input[type="search"]{
+.navbar #navbar-body #div-search input[type="search"]{
     font-size: 1rem;
     background-color: var(--dark-light-yellow);
     flex-grow: 2;
     width: 30vw;
 }
 
-.navbar #navbar-body input[type="search"]::placeholder{
+.navbar #navbar-body #div-search input[type="search"]::placeholder{
     color: var(--light-yellow);
 }
 
