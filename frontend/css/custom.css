@@ -344,19 +344,109 @@ footer p:nth-child(3){
     z-index: 10;
 }
 
+.modal-container .colors div{
+    padding: 2%;
+    cursor: pointer;
+    height: 80px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-container .colors div img{
+    width: 25px;
+    object-fit: cover;
+    /* display: none; */
+}
+
 .modal-container .modal, .modal-container .colors{
     width: 60%;
 }
 
-.modal-container .colors div img{
-    width: 20px;
+.modal{
+    padding: 28px;
 }
 
-.modal .controls img{
-    width: 20px;
+.modal .controls{
+    align-self: flex-end;
 }
 
-.modal .marks img{
-    width: 20px;
+.modal .controls .circle a{
+    background-color: var(--darken-green);
+    margin-left: 10px;
+    border-radius: 50%;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .controls .circle a:hover{
+    background-color: var(--dark-light-yellow);
+}
+
+.modal .controls .circle img{
+    width: 15px;
+}
+
+.modal .title h2{
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--light-yellow);
+    border-bottom: var(--light-yellow) 2px solid;
+    margin-bottom: 20px;
+}
+
+.modal .text p{
+    font-weight: 300;
+    font-size: .9rem;
+    color: var(--light-yellow);
+}
+
+.modal .marks{
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.modal .marks p{
+    border: var(--light-yellow) 2px solid;
+    border-radius: 10px;
+    margin-right: 10px;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+
+.modal .marks a, .modal .marks p{
+    color: var(--light-yellow);
+    font-weight: 300;
+    font-size: .85rem;
+    margin-top: 10px;
+}
+
+.modal .marks p img{
+    width: 7px;
+    margin-left: 5px;
+}
+
+.modal .marks a img{
+    width: 15px;
+    margin-right: 5px;
+}
+
+.modal .marks a:hover{
+    text-decoration: underline 2px solid;
+}
+
+.modal .edit-note{
+    text-align: end;
+    margin-top: 30px;
+}
+
+.modal .edit-note p{
+    font-weight: 300;
+    font-size: .75rem;
+    color: var(--light-yellow);
 }
 

@@ -90,6 +90,13 @@
     }
 }
 
+@media screen and (max-width: 750px){
+    /* MODAL EDIT/CREATE NOTES */
+    .modal-container .colors div{
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 650px){
     /* HEADER MENU */
     header nav #menu{
@@ -179,6 +186,14 @@
     }
     .navbar #navbar-body #div-search li:nth-child(1){
         order: 1;
+    }
+
+    /* MODAL EDIT/CREATE NOTES */
+    .modal-container .modal{
+        width: 80%;
+    }
+    .modal-container .colors{
+        width: 80%;
     }
 }
 
