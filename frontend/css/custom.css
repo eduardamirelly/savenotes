@@ -266,16 +266,19 @@ footer p:nth-child(3){
 }
 
 .notes{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
     margin: 40px 0px;
-    grid-gap: 30px;
-    /* align-items: flex-start; */
+    columns: 4;
+    column-gap: 20px;
 }
 
 .notes .note-item{
     padding: 28px;
     position: relative;
+    width: 100%;
+    margin: 0 0 20px;
+    overflow: hidden;
+    break-inside: avoid;
 }
 
 .notes .note-item #delete-note{
@@ -292,10 +295,6 @@ footer p:nth-child(3){
 
 .notes .note-item .marks-note{
     margin-top: 5px;
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 5px;
-    align-items: flex-start; */
     display: flex;
     flex-wrap: wrap;
 }

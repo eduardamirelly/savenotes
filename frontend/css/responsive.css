@@ -15,6 +15,9 @@
     .content-center div #img-input img, .content-center .form-input{
         width: 38vw;
     }
+
+    /* NOTES AREA */
+    
 }
 
 @media screen and (max-width: 1050px){
