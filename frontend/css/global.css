@@ -198,3 +198,7 @@ section h2{
 .orange{
     background-color: var(--orange);
 }
+
+.red{
+    background-color: var(--red);
+}
