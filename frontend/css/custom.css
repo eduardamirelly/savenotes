@@ -343,11 +343,11 @@ footer p:nth-child(3){
     background-color: rgba(255, 249, 222, .4);
     z-index: 10;
     padding: 50px;
-    /* display: none; */
+    display: none;
 }
 
 .modal-container.modal-show{
-    /* display: flex; */
+    display: flex;
 }
 
 .modal-container .colors{

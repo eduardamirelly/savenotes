@@ -37,7 +37,7 @@
                     </div>
                     <div class="menu-bar">
                         <div class="display-flex align-items-center justify-content-end">
-                            <button type="button" id="button-open" onclick="openMenu()"><img src="./images/menu.png" alt="menu"></button>
+                            <button type="button" id="button-open" onclick="openMenu()"><img src="./images/menu.png" alt="menu"><button>
                             <button type="button" id="button-close" onclick="closeMenu()"><img src="./images/close.png" alt="close"></button>
                         </div>
                     </div>
@@ -55,8 +55,8 @@
                         </li>
                     </div>
                     <div id="div-plus" class="display-flex align-items-center">
-                        <li><a href="#"><img src="./images/plus.png" alt="plus">Nota</a></li>
-                        <li><a href="#"><img src="./images/plus.png" alt="plus">Marcador</a></li>
+                        <li><a href="#" id="addnote" onclick="initialModal()"><img src="./images/plus.png" alt="plus">Nota</a></li>
+                        <li><a href="#" id="addmark"><img src="./images/plus.png" alt="plus">Marcador</a></li>
                     </div>
                 </ul>
             </nav> 
@@ -175,7 +175,7 @@
                     <a href="#"><img src="./images/trash.png" alt="trash"></a>
                 </div>
                 <div class="circle">
-                    <a href="#"><img src="./images/button_x.png" alt="x"></a>
+                    <a href="#" id="close"><img src="./images/button_x.png" alt="x"></a>
                 </div>
             </div>
             <div class="title">
@@ -208,6 +208,7 @@
     <!-- JAVASCRIPT -->
 
     <script>
+        //Menu
         var menu = document.getElementById('menu');
         var porcent_left = menu.style.left;
         var button_menu_open = document.querySelector('#button-open');
@@ -225,6 +226,28 @@
             button_menu_close.style.display = 'none';
             button_menu_open.style.display = 'block';
         }
+
+        //Modal
+        function initialModal(){
+            const modal = document.getElementById('modal-note');
+            if(modal){
+                const closeModal = document.getElementById('close');
+                console.log(modal);
+                console.log(closeModal);
+                modal.classList.add('modal-show');
+
+                modal.addEventListener('click', function (e) {
+                    if(e.target.id == 'modal-note' || e.target.id == 'close'){
+                        modal.classList.remove('modal-show');
+                    }
+                    console.log(e.target.id)
+                });
+            }
+        }
+
+        //const addNote = document.getElementById('addnote');
+        //initialModal();
+
     </script>
 
 </body>
