@@ -17,7 +17,9 @@
     }
 
     /* NOTES AREA */
-    
+    .notes{
+        columns: 3;
+    }
 }
 
 @media screen and (max-width: 1050px){
@@ -47,6 +49,11 @@
     }
     .content-center .form-input{
         width: 60vw;
+    }
+
+    /* NOTES AREA */
+    .notes{
+        columns: 2;
     }
 }
 
@@ -152,6 +159,11 @@
     .content-center .form-input{
         width: 90vw;
         padding: 0px 30px;
+    }
+
+    /* NOTES AREA */
+    .notes{
+        columns: 1;
     }
 }
 
