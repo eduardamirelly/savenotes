@@ -342,12 +342,13 @@ footer p:nth-child(3){
     height: 100%;
     background-color: rgba(255, 249, 222, .4);
     z-index: 10;
+    padding: 50px;
 }
 
 .modal-container .colors div{
     padding: 2%;
     cursor: pointer;
-    height: 80px;
+    height: 70px;
     width: 80px;
     display: flex;
     align-items: center;
@@ -366,6 +367,21 @@ footer p:nth-child(3){
 
 .modal{
     padding: 28px;
+    overflow-y: scroll;
+}
+
+.modal::-webkit-scrollbar{
+    width: 10px;
+    
+}
+
+.modal::-webkit-scrollbar-thumb{
+    background-color: var(--dark-light-yellow);
+    border-radius: 20px;
+}
+
+.modal::-webkit-scrollbar-thumb:hover{
+    background-color: var(--light-yellow);
 }
 
 .modal .controls{
