@@ -165,19 +165,9 @@ footer p:nth-child(3){
 
 .navbar #navbar-body{
     margin-top: 40px;
-}
-
-.navbar #navbar-body div:nth-child(1){
-    width: 75%;
-}
-
-.navbar #navbar-body div:nth-child(1) li:nth-child(2){
-    width: 40%;
-    margin-left: 15px;
-}
-
-.navbar #navbar-body div:nth-child(2){
-    width: 25%;
+    /* width: 100%; */
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .navbar #navbar-body div:nth-child(2) li:nth-child(2){
@@ -202,14 +192,31 @@ footer p:nth-child(3){
     font-size: 1rem;
     background-color: var(--dark-light-yellow);
     flex-grow: 2;
+    width: 30vw;
 }
 
 .navbar #navbar-body input[type="search"]::placeholder{
     color: var(--light-yellow);
 }
 
+.navbar #navbar-body #search{
+    position: relative;
+}
+
+.navbar #navbar-body #search button{
+    position: absolute;
+    background-color: transparent;
+    cursor: pointer;
+    right: 20px;
+}
+
+.navbar #navbar-body #search img{
+    margin: 50% 0%;
+}
+
 .navbar #navbar-body #marks-select{
-    width: 100%;
+    width: 20vw;
+    margin-left: 15px;
     padding: 12px 20px;
     font-size: 1.1rem;
     color: var(--light-yellow);
@@ -266,7 +273,6 @@ footer p:nth-child(3){
 }
 
 .notes{
-    width: 100%;
     margin: 40px 0px;
     columns: 4;
     column-gap: 20px;
