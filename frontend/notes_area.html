@@ -4,42 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SaveNotes | Register</title>
+    <title>SaveNotes | Notas</title>
     <link rel="icon" href="./images/post-it.png">
 
     <!-- CSS MAIN -->
     <link rel="stylesheet" href="./css/main.css">
+
+    <!-- FONTS GOOGLE -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- CONTENT NOTES AREA -->
 
+    <div class="content display-flex flex-direction-column align-items-center justify-content-between">
+
         <!-- HEADER -->
 
-        <header>
-            <div>
-                <nav>
-                    <ul>
-                        <li>SaveNoter</li>
-                        <li>username</li>
-                    </ul>
-                    <ul>
-                        <li><input type="search" name="search" placeholder="Buscar"></li>
+        <header class="display-flex justify-content-center">
+            <nav class="navbar display-flex flex-direction-column align-items-center justify-content-center">
+                <div id="navbar-header" class="display-flex align-items-center justify-content-between">
+                    <div>
+                        <h1 id="savenote"><img src="./images/post-it.png" alt="post-it">SaveNotes</h1>
+                    </div>
+                    <div id="menu">
+                        <div id="name_menu">Menu</div>
+                        <ul class="display-flex align-items-center justify-content-end">
+                            <li><a href="#"><img src="./images/user.png" alt="user">User</a></li>
+                            <li><a href="#"><img src="./images/logout.png" alt="user">Logout</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu-bar">
+                        <div class="display-flex align-items-center justify-content-end">
+                            <button type="button" id="button-open" onclick="openMenu()"><img src="./images/menu.png" alt="menu"></button>
+                            <button type="button" id="button-close" onclick="closeMenu()"><img src="./images/close.png" alt="close"></button>
+                        </div>
+                    </div>
+                </div>
+                <ul id="navbar-body" class="display-flex align-items-center">
+                    <div id="div-search" class="display-flex align-items-center">
+                        <li id="search"><input type="search" name="search" placeholder="Buscar"><button type="submit"><img src="./images/loupe.png" alt="loupe"></button></li>
                         <li>
-                            <select name="marks-select">
-                                <optgroup>
-                                    <option value="0" selected>Marcadores</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                </optgroup>
+                            <select id="marks-select">
+                                <option selected id="selected">Marcadores</option>
+                                <option>Livros</option>
+                                <option>Week</option>
+                                <option>Videogames</option>
                             </select>
                         </li>
-                        <li><a href="#"><img src="./images/plus.png" alt="plus" width="20px">Nota</a></li>
-                        <li><a href="#"><img src="./images/plus.png" alt="plus" width="20px">Marcador</a></li>
-                    </ul>
-                </nav> 
-            </div>
+                    </div>
+                    <div id="div-plus" class="display-flex align-items-center">
+                        <li><a href="#"><img src="./images/plus.png" alt="plus">Nota</a></li>
+                        <li><a href="#"><img src="./images/plus.png" alt="plus">Marcador</a></li>
+                    </div>
+                </ul>
+            </nav> 
         </header>
 
         <!-- END HEADER -->
@@ -47,42 +67,87 @@
         <!-- NOTES -->
 
         <main>
-            <div>
-                <div>
-                    <div>
-                        <img src="./images/trash.png" alt="trash" width="20px">
-                        <h3>Título da Anotação</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id dolor dolor. Donec iaculis lacus ac enim posuere, ut euismod ipsum accumsan. Vestibulum magna massa, fermentum vitae orci ut, suscipit.</p>
+            <div class="notes">
+                <div class="note-item dark-green display-flex flex-direction-column">
+                    <a id="delete-note" href="#"><img src="./images/trash.png" alt="trash"></a>
+                    <h3>Título da Anotação</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id dolor dolor. Donec iaculis lacus ac enim posuere, ut euismod ipsum accumsan. Vestibulum magna massa, fermentum vitae orci ut, suscipit.</p>
+                    <div class="marks-note">
+                        <p href="#">Marcador</p>
+                        <p href="#">Marcador</p>
                     </div>
-                    <div>
-                        <img src="./images/trash.png" alt="trash" width="20px">
-                        <h3>Título da Anotação</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id dolor dolor. Donec iaculis lacus ac enim posuere, ut euismod ipsum accumsan. Vestibulum magna massa, fermentum vitae orci ut, suscipit.</p>
+                </div>
+                <div class="note-item medium-green display-flex flex-direction-column">
+                    <a id="delete-note" href="#"><img src="./images/trash.png" alt="trash"></a>
+                    <h3>Título da Anotação</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id dolor dolor. Donec iaculis lacus ac enim posuere, ut euismod ipsum accumsan. Vestibulum magna massa, fermentum vitae orci ut, suscipit.</p>
+                </div>
+                <div class="note-item yellow display-flex flex-direction-column">
+                    <a id="delete-note" href="#"><img src="./images/trash.png" alt="trash"></a>
+                    <h3>Título da Anotação</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis lacus at justo volutpat luctus vitae laoreet urna. Nulla ac enim volutpat, porta tellus non, efficitur magna. Duis faucibus sodales elementum. In sed efficitur mi. Phasellus laoreet magna id sodales semper. Nunc ac risus facilisis leo porttitor placerat. Fusce quam. </p>
+                    <div class="marks-note">
+                        <p href="#">Marcador</p>
+                        <p href="#">Marcador</p>
                     </div>
-                    <div>
-                        <img src="./images/trash.png" alt="trash" width="20px">
-                        <h3>Título da Anotação</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id dolor dolor. Donec iaculis lacus ac enim posuere, ut euismod ipsum accumsan. Vestibulum magna massa, fermentum vitae orci ut, suscipit.</p>
+                </div>
+                <div class="note-item yellow display-flex flex-direction-column">
+                    <a id="delete-note" href="#"><img src="./images/trash.png" alt="trash"></a>
+                    <h3>Título da Anotação</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis lacus at justo volutpat luctus vitae laoreet urna. Nulla ac enim volutpat, porta tellus non, efficitur magna. Duis faucibus sodales elementum. In sed efficitur mi. Phasellus laoreet magna id sodales semper. Nunc ac risus facilisis leo porttitor placerat. Fusce quam .</p>
+                </div>
+                <div class="note-item orange display-flex flex-direction-column">
+                    <a id="delete-note" href="#"><img src="./images/trash.png" alt="trash"></a>
+                    <h3>Título da Anotação</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id dolor dolor. Donec iaculis lacus ac enim posuere, ut euismod ipsum accumsan. Vestibulum magna massa, fermentum vitae orci ut, suscipit.</p>
+                    <div class="marks-note">
+                        <p href="#">Marcador</p>
+                        <p href="#">Marcador</p>
                     </div>
-                    <div>
-                        <img src="./images/trash.png" alt="trash" width="20px">
-                        <h3>Título da Anotação</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id dolor dolor. Donec iaculis lacus ac enim posuere, ut euismod ipsum accumsan. Vestibulum magna massa, fermentum vitae orci ut, suscipit.</p>
+                </div>
+                <div class="note-item dark-green display-flex flex-direction-column">
+                    <a id="delete-note" href="#"><img src="./images/trash.png" alt="trash"></a>
+                    <h3>Título da Anotação</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id dolor dolor. Donec iaculis lacus ac enim posuere, ut euismod ipsum accumsan. Vestibulum magna massa, fermentum vitae orci ut, suscipit.</p>
+                    <div class="marks-note">
+                        <p href="#">Marcador</p>
+                        <p href="#">Livros, filmes e séries</p>
                     </div>
-                    <div>
-                        <img src="./images/trash.png" alt="trash" width="20px">
-                        <h3>Título da Anotação</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id dolor dolor. Donec iaculis lacus ac enim posuere, ut euismod ipsum accumsan. Vestibulum magna massa, fermentum vitae orci ut, suscipit.</p>
+                </div>
+                <div class="note-item dark-green display-flex flex-direction-column">
+                    <a id="delete-note" href="#"><img src="./images/trash.png" alt="trash"></a>
+                    <h3>Título da Anotação</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id dolor dolor. Donec iaculis lacus ac enim posuere, ut euismod ipsum accumsan. Vestibulum magna massa, fermentum vitae orci ut, suscipit.</p>
+                    <div class="marks-note">
+                        <p href="#">Marcador</p>
+                        <p href="#">Livros, filmes e séries</p>
                     </div>
-                    <div>
-                        <img src="./images/trash.png" alt="trash" width="20px">
-                        <h3>Título da Anotação</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id dolor dolor. Donec iaculis lacus ac enim posuere, ut euismod ipsum accumsan. Vestibulum magna massa, fermentum vitae orci ut, suscipit.</p>
+                </div>
+                <div class="note-item dark-green display-flex flex-direction-column">
+                    <a id="delete-note" href="#"><img src="./images/trash.png" alt="trash"></a>
+                    <h3>Título da Anotação</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id dolor dolor. Donec iaculis lacus ac enim posuere, ut euismod ipsum accumsan. Vestibulum magna massa, fermentum vitae orci ut, suscipit.</p>
+                    <div class="marks-note">
+                        <p href="#">Marcador</p>
+                        <p href="#">Livros, filmes e séries</p>
                     </div>
-                    <div>
-                        <img src="./images/trash.png" alt="trash" width="20px">
-                        <h3>Título da Anotação</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id dolor dolor. Donec iaculis lacus ac enim posuere, ut euismod ipsum accumsan. Vestibulum magna massa, fermentum vitae orci ut, suscipit.</p>
+                </div>
+                <div class="note-item dark-green display-flex flex-direction-column">
+                    <a id="delete-note" href="#"><img src="./images/trash.png" alt="trash"></a>
+                    <h3>Título da Anotação</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id dolor dolor. Donec iaculis lacus ac enim posuere, ut euismod ipsum accumsan. Vestibulum magna massa, fermentum vitae orci ut, suscipit.</p>
+                    <div class="marks-note">
+                        <p href="#">Marcador</p>
+                        <p href="#">Livros, filmes e séries</p>
+                    </div>
+                </div>
+                <div class="note-item dark-green display-flex flex-direction-column">
+                    <a id="delete-note" href="#"><img src="./images/trash.png" alt="trash"></a>
+                    <h3>Título da Anotação</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id dolor dolor. Donec iaculis lacus ac enim posuere, ut euismod ipsum accumsan. Vestibulum magna massa, fermentum vitae orci ut, suscipit.</p>
+                    <div class="marks-note">
+                        <p href="#">Marcador</p>
+                        <p href="#">Livros, filmes e séries</p>
                     </div>
                 </div>
             </div>
@@ -90,7 +155,31 @@
 
         <!-- END NOTES -->
 
+    </div>
+
     <!-- END NOTES AREA -->
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+        var menu = document.getElementById('menu');
+        var porcent_left = menu.style.left;
+        var button_menu_open = document.querySelector('#button-open');
+        var button_menu_close = document.querySelector('#button-close');
+
+        function openMenu(){
+            menu.style.left = '0%';
+            menu.style.transition = '0.5s';
+            button_menu_open.style.display = 'none';
+            button_menu_close.style.display = 'block';
+        }
+
+        function closeMenu(){
+            menu.style.left = porcent_left;
+            button_menu_close.style.display = 'none';
+            button_menu_open.style.display = 'block';
+        }
+    </script>
 
 </body>
 </html>

@@ -103,10 +103,10 @@ header nav ul li a:hover{
 
 header nav ul li img, #savenote img{
     margin-right: 10px;
-    width: 1.5rem;
+    width: 1.2rem;
 }
 
-header nav ul li:nth-child(2){
+header nav #menu ul li:nth-child(2){
     margin-left: 25px;
 }
 
@@ -179,4 +179,22 @@ section h2{
     padding: 4% 13%;
     font-size: 1rem;
     margin-bottom: 15px;
+}
+
+/* BACKGROUNDS COLORS NOTES */
+
+.dark-green{
+    background-color: var(--dark-green);
+}
+
+.medium-green{
+    background-color: var(--medium-green);
+}
+
+.yellow{
+    background-color: var(--yellow);
+}
+
+.orange{
+    background-color: var(--orange);
 }
