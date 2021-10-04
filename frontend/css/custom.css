@@ -429,18 +429,35 @@ footer p:nth-child(3){
     width: 15px;
 }
 
-.modal .title h2{
+.modal .title textarea{
     font-weight: 600;
     font-size: 2rem;
     color: var(--light-yellow);
     border-bottom: var(--light-yellow) 2px solid;
     margin-bottom: 20px;
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    resize: none;
+    line-height: 40px;
 }
 
-.modal .text p{
+.modal .title textarea::placeholder, .modal .text textarea::placeholder{
+    color: var(--dark-light-yellow);
+}
+
+.modal .text textarea{
     font-weight: 300;
     font-size: .9rem;
     color: var(--light-yellow);
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    resize: none;
 }
 
 .modal .marks{

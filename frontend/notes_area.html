@@ -179,10 +179,10 @@
                 </div>
             </div>
             <div class="title">
-                <h2>Título Anotação</h2>
+                <textarea name="input-title" id="textarea-title" rows="1" placeholder="Title"></textarea>
             </div>
             <div class="text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id dolor dolor. Donec iaculis lacus ac enim posuere, ut euismod ipsum accumsan. Vestibulum magna massa, fermentum vitae orci ut, suscipit.</p>
+                <textarea name="input-text" id="textarea-text" rows="1" placeholder="Text"></textarea>
             </div>
             <div class="marks display-flex align-items-center">
                 <p href="#" class="display-flex align-items-center">Marcador<img src="./images/button_x.png" alt="x"></p>
@@ -227,27 +227,37 @@
             button_menu_open.style.display = 'block';
         }
 
-        //Modal
+        //Modal edit/create
         function initialModal(){
             const modal = document.getElementById('modal-note');
             if(modal){
                 const closeModal = document.getElementById('close');
-                console.log(modal);
-                console.log(closeModal);
                 modal.classList.add('modal-show');
+
+                textarea_title.style.height = 'auto';
+                textarea_title.style.height = textarea_title.scrollHeight + 'px';
+
+                textarea_text.style.height = 'auto';
+                textarea_text.style.height = textarea_text.scrollHeight + 'px';
 
                 modal.addEventListener('click', function (e) {
                     if(e.target.id == 'modal-note' || e.target.id == 'close'){
                         modal.classList.remove('modal-show');
                     }
-                    console.log(e.target.id)
                 });
             }
         }
 
-        //const addNote = document.getElementById('addnote');
-        //initialModal();
+        var textarea_title = document.getElementById('textarea-title');
+        var textarea_text = document.getElementById('textarea-text');
 
+        textarea_title.addEventListener('input', autoResize, false)
+        textarea_text.addEventListener('input', autoResize, false);
+      
+        function autoResize() {
+            this.style.height = 'auto';
+            this.style.height = this.scrollHeight + 'px';
+        }
     </script>
 
 </body>
