@@ -163,13 +163,13 @@
 
     <div id="modal-note" class="modal-container display-flex flex-direction-column align-items-center justify-content-center">
         <div class="colors display-flex align-items-center">
-            <div class="dark-green"><img src="./images/button_x.png" alt="x"></div>
-            <div class="medium-green hidden"><img src="./images/button_x.png" alt="x"></div>
-            <div class="yellow hidden"><img src="./images/button_x.png" alt="x"></div>
-            <div class="orange hidden"><img src="./images/button_x.png" alt="x"></div>
-            <div class="red hidden"><img src="./images/button_x.png" alt="x"></div>
+            <div onclick="ChangeColor('c-d-green')" id="c-d-green" class="dark-green"><img src="./images/button_x.png" alt="x"></div>
+            <div onclick="ChangeColor('c-m-green')" id="c-m-green" class="medium-green hidden"><img src="./images/button_x.png" alt="x"></div>
+            <div onclick="ChangeColor('c-yellow')" id="c-yellow" class="yellow hidden"><img src="./images/button_x.png" alt="x"></div>
+            <div onclick="ChangeColor('c-orange')" id="c-orange" class="orange hidden"><img src="./images/button_x.png" alt="x"></div>
+            <div onclick="ChangeColor('c-red')" id="c-red" class="red hidden"><img src="./images/button_x.png" alt="x"></div>
         </div>
-        <div class="modal dark-green display-flex flex-direction-column">
+        <div id="modal-note-content" class="modal dark-green display-flex flex-direction-column">
             <div class="controls display-flex">
                 <div class="circle">
                     <a href="#"><img src="./images/trash.png" alt="trash"></a>
@@ -258,6 +258,43 @@
             this.style.height = 'auto';
             this.style.height = this.scrollHeight + 'px';
         }
+
+        var modal = document.getElementById('modal-note-content');
+        var colorOld = null;
+        var strColorOld = '';
+
+        function FindColorActual() {
+            const colors = ['dark-green', 'medium-green', 'yellow', 'orange', 'red'];
+            const colorsID = ['c-d-green', 'c-m-green', 'c-yellow', 'c-orange', 'c-red'];
+            console.log(colors.length);
+            for(var i = 0; i<colors.length; i++){
+                if(modal.classList.contains(colors[i])){
+                    colorOld = document.getElementById(colorsID[i]);
+                    strColorOld = colors[i];
+                    console.log(strColorOld);
+                    break;
+                }
+            }
+        }
+
+        function ChangeColor(color) {
+
+            FindColorActual();
+            const colorNew = document.getElementById(color);
+
+            colorNew.addEventListener('click', function() {
+                if(colorNew.classList.contains('hidden')){
+                    colorNew.classList.remove('hidden');
+                    colorOld.classList.add('hidden');
+                    console.log(colorOld.classList);
+                    modal.classList.remove(strColorOld);
+                    modal.classList.add(colorNew.className);
+                }
+            });
+        }
+
+
+
     </script>
 
 </body>
