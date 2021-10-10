@@ -56,6 +56,14 @@
     .modal-container .colors{
         width: 80%;
     }
+
+    /* MODAL MARKS NOTES */
+    #modal-mark .button-green{
+        width: 30%;
+    }
+    #modal-mark .input-digit{
+        width: 70%;
+    }
 }
 
 @media screen and (max-width: 980px){
@@ -211,6 +219,19 @@
     .modal-container .colors{
         width: 100%;
     }
+
+    /* MODAL MARKS NOTES */
+    #modal-mark .modal .add-mark{
+        flex-direction: column;
+    }
+    #modal-mark .button-green{
+        width: 100%;
+    }
+    #modal-mark .input-digit{
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 15px;
+    }
 }
 
 @media screen and (max-width: 500px){
@@ -238,6 +259,11 @@
     /* NOTES AREA */
     .notes{
         columns: 1;
+    }
+
+    /* MODAL MARKS NOTES */
+    #modal-mark .modal h2{
+        font-size: 1.3rem;
     }
 }
 

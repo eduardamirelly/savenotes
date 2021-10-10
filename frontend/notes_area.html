@@ -56,7 +56,7 @@
                     </div>
                     <div id="div-plus" class="display-flex align-items-center">
                         <li><a href="#" id="addnote" onclick="initialModal()"><img src="./images/plus.png" alt="plus">Nota</a></li>
-                        <li><a href="#" id="addmark"><img src="./images/plus.png" alt="plus">Marcador</a></li>
+                        <li><a href="#" id="addmark" onclick="initialModalMark()"><img src="./images/plus.png" alt="plus">Marcador</a></li>
                     </div>
                 </ul>
             </nav> 
@@ -205,6 +205,30 @@
 
     <!-- END MODAL EDIT/CREATE NOTE -->
 
+    <!-- MODAL MARK -->
+
+    <div id="modal-mark" class="modal-container display-flex display-flex flex-direction-column align-items-center justify-content-center">
+        <div class="modal display-flex flex-direction-column">
+            <div class="controls display-flex justify-content-end">
+                <div class="circle">
+                    <a href="#"><img src="./images/trash.png" alt="trash"></a>
+                </div>
+                <div class="circle">
+                    <a href="#" id="close-mark"><img src="./images/button_x.png" alt="x"></a>
+                </div>
+            </div>
+            <h2>Criar novo marcador</h2>
+            <div class="add-mark display-flex align-items-center justify-content-between">
+                <input class="input-digit" type="text" name="mark" placeholder="marcador">
+                <button type="submit" class="button-green">Register</button>
+            </div>
+            <p>*Limite de 30 caracteres</p>
+        </div>
+
+    </div>
+
+    <!-- END MODAL MARK -->
+
     <!-- JAVASCRIPT -->
 
     <script>
@@ -225,6 +249,21 @@
             menu.style.left = porcent_left;
             button_menu_close.style.display = 'none';
             button_menu_open.style.display = 'block';
+        }
+
+        //Modal mark
+        function initialModalMark(){
+            const modal = document.getElementById('modal-mark');
+            if(modal){
+                const closeModal = document.getElementById('close-mark');
+                modal.classList.add('modal-show');
+
+                modal.addEventListener('click', function (e) {
+                    if(e.target.id == 'modal-mark' || e.target.id == 'close-mark'){
+                        modal.classList.remove('modal-show');
+                    }
+                });
+            }
         }
 
         //Modal edit/create
@@ -292,9 +331,6 @@
                 }
             });
         }
-
-
-
     </script>
 
 </body>
