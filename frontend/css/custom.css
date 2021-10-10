@@ -399,7 +399,6 @@ footer p:nth-child(3){
 
 .modal::-webkit-scrollbar{
     width: 10px;
-    
 }
 
 .modal::-webkit-scrollbar-thumb{
@@ -510,3 +509,37 @@ footer p:nth-child(3){
     color: var(--light-yellow);
 }
 
+/* MODAL MARKS NOTES */
+
+#modal-mark .modal{
+    background-color: var(--darken-green);
+}
+
+#modal-mark .modal h2{
+    color: var(--light-yellow);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+#modal-mark .modal p{
+    color: var(--light-yellow);
+    font-weight: 200;
+    font-size: .8rem;
+    margin: 20px 0px;
+}
+
+#modal-mark .modal .controls .circle a{
+    background-color: var(--light-aquamarine);
+}
+
+#modal-mark .button-green{
+    width: 20%;
+    padding: 15px;
+}
+
+#modal-mark .input-digit{
+    width: 70%;
+    margin-bottom: 0;
+    margin-right: 15px;
+}
