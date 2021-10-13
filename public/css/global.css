@@ -1,0 +1,211 @@
+/* GLOBAL SETTINGS */
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: 'Poppins', sans-serif;
+    color: var(--darken-green);
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    background-color: var(--light-yellow);
+}
+
+.content{
+    padding: 0% 8%;
+}
+
+.content-center{
+    width: 100vw;
+    height: 100vh;
+}
+
+header, section, footer{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    object-fit: cover;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+
+/* CLASSES GLOBAL FLEX BOX */
+
+.display-flex{
+    display: flex;
+}
+
+.flex-direction-column{
+    flex-direction: column;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.align-items-start{
+    align-items: flex-start;
+}
+
+.align-items-end{
+    align-items: flex-end;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.justify-content-around{
+    justify-content: space-around;
+}
+
+.justify-content-end{
+    justify-content: end;
+}
+
+/* HEADER CLASSES GLOBAL */
+
+header{
+    margin-top: 50px;
+}
+
+header nav div:nth-child(3){
+    display: none;
+}
+
+header nav div:nth-child(3) #button-close{
+    display: none;
+}
+
+header nav ul li a{
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--light-aquamarine);
+}
+
+header nav ul li a:hover{
+    color: var(--medium-aquamarine);
+}
+
+header nav ul li img, #savenote img{
+    margin-right: 10px;
+    width: 1.2rem;
+}
+
+header nav #menu ul li:nth-child(2){
+    margin-left: 25px;
+}
+
+/* SECTIONS CLASSES GLOBAL */
+
+section h2{
+    font-size: 1.8rem;
+    text-align: center;
+    color: var(--medium-aquamarine);
+}
+
+/* BUTTONS CLASSES GLOBAL */
+
+.button-green{
+    background-color: var(--medium-aquamarine);
+    color: var(--light-yellow);
+    padding: 2.5% 8%;
+    cursor: pointer;
+}
+
+.button-green:hover{
+    background-color: var(--dark-aquamarine);
+}
+
+/* INPUTS CLASSES GLOBAL */
+
+.content-center .form-input form{
+    width: 100%;
+}
+
+.content-center .form-input form h2{
+    color: var(--light-yellow);
+}
+
+.content-center .form-input p{
+    margin-top: 10px;
+    color: var(--medium-aquamarine);
+    font-size: .9rem;
+}
+
+.content-center .form-input p a{
+    color: var(--light-yellow);
+    text-transform: uppercase;
+}
+
+.content-center .form-input p a:hover{
+    color: var(--dark-light-yellow);
+}
+
+.input-digit{
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: var(--dark-light-yellow);
+    color: var(--medium-aquamarine);
+    font-weight: 400;
+    font-size: .88rem;
+}
+
+.input-digit::placeholder{
+    color: var(--medium-aquamarine);
+    font-weight: 400;
+}
+
+.input-digit:focus{
+    outline: var(--light-yellow) 2px solid;
+}
+
+.button-input{
+    padding: 4% 13%;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* BACKGROUNDS COLORS NOTES */
+
+.dark-green{
+    background-color: var(--dark-green);
+}
+
+.medium-green{
+    background-color: var(--medium-green);
+}
+
+.yellow{
+    background-color: var(--yellow);
+}
+
+.orange{
+    background-color: var(--orange);
+}
+
+.red{
+    background-color: var(--red);
+}
