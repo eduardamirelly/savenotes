@@ -130,3 +130,5 @@
             button_menu_open.style.display = 'block';
         }
     </script>
+
+@endsection

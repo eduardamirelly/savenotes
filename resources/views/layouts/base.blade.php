@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SaveNotes | @yield('title')</title>
     <link rel="icon" href="/images/post-it.png">
-
+    
     <!-- CSS MAIN -->
     <link rel="stylesheet" href="/css/main.css">
 
