@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\User;
+use GuzzleHttp\Psr7\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +16,26 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
-});
+    return view('pages.index');
+})->name('index');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
+Route::get('/login', function () {
+    return view('pages.login');
+})->name('login');
+
+Route::get('/register', function () {
+    return view('pages.register');
+})->name('register');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {    
+
+    $user = auth()->user();
+
+    return view('pages.notes_area', ['user' => $user]);
 })->name('dashboard');
+
+
+
+// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+//     return view('dashboard');
+// })->name('dashboard');

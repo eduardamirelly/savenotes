@@ -19,8 +19,12 @@
                     <div id="menu">
                         <div id="name_menu">Menu</div>
                         <ul class="display-flex align-items-center justify-content-end">
-                            <li><a href="#"><img src="./images/user.png" alt="user">User</a></li>
-                            <li><a href="#"><img src="./images/logout.png" alt="user">Logout</a></li>
+                            <li><a href="#"><img src="./images/user.png" alt="user">{{ $user->name }}</a></li>
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                    this.closest('form').submit();"><img src="./images/logout.png" alt="user">Logout</a></li>
+                            </form>
                         </ul>
                     </div>
                     <div class="menu-bar">
