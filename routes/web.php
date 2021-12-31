@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\Note;
 use Illuminate\Http\Request;
+use App\Http\Controllers\NoteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,34 +20,11 @@ Route::get('/', function () {
     return view('pages.index');
 })->name('index');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {    
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', [NoteController::class, 'dashboardNote'])->name('dashboard');
 
-    $user = auth()->user();
-    $notes = Note::all();
+Route::middleware(['auth:sanctum', 'verified'])->get('dashboard/create-note', [NoteController::class, 'create_note'])->name('create-note');
 
-    return view('pages.notes_area', ['user' => $user, 'notes' => $notes]);
-})->name('dashboard');
-
-Route::middleware(['auth:sanctum', 'verified'])->get('dashboard/create-note', function (Request $request) {    
-
-    $note = new Note;
-    
-    $note->title = $request->title;
-    $note->content = $request->content;
-
-    $note->save();
-
-    return redirect('dashboard');
-})->name('create-note');
-
-Route::middleware(['auth:sanctum', 'verified'])->get('dashboard/delete-note/', function (Request $request) {    
-
-    $note = Note::find($request->id);
-
-    $note->delete();
-
-    return redirect('dashboard');
-})->name('delete-note');
+Route::middleware(['auth:sanctum', 'verified'])->get('dashboard/delete-note/{id}', [NoteController::class, 'delete_note'])->whereNumber('id')->name('delete-note');
 
 
 
