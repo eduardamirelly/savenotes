@@ -50,9 +50,9 @@
                         <li>
                             <select id="marks-select">
                                 <option selected id="selected">Marcadores</option>
-                                <option>Livros</option>
-                                <option>Week</option>
-                                <option>Videogames</option>
+                                @foreach ($marks as $mark)
+                                    <option>{{ $mark->name }}</option>
+                                @endforeach
                             </select>
                         </li>
                     </div>

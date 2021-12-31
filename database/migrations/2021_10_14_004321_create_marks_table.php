@@ -17,7 +17,7 @@ class CreateMarksTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name', 30);
-            $table->foreignId('note_id');
+            //$table->foreignId('note_id');
         });
     }
 

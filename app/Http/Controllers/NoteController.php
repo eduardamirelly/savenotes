@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Note;
+use App\Models\Mark;
 
 class NoteController extends Controller
 {
     function dashboardNote(){
         $user = auth()->user();
         $notes = Note::all();
-        return view('pages.notes_area', ['user' => $user, 'notes' => $notes]);
+        $marks = Mark::all();
+        return view('pages.notes_area', ['user' => $user, 'notes' => $notes, 'marks' => $marks]);
     }
 
     function create_note(Request $request){

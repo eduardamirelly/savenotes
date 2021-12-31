@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Models\Note;
-use Illuminate\Http\Request;
 use App\Http\Controllers\NoteController;
+use App\Http\Controllers\MarkController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +24,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', [NoteControll
 Route::middleware(['auth:sanctum', 'verified'])->get('dashboard/create-note', [NoteController::class, 'create_note'])->name('create-note');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('dashboard/delete-note/{id}', [NoteController::class, 'delete_note'])->whereNumber('id')->name('delete-note');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('dashboard/create-mark', [MarkController::class, 'create_mark'])->name('create-mark');
 
 
 

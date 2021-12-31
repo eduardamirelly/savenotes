@@ -9,10 +9,12 @@
             </div>
         </div>
         <h2>Criar novo marcador</h2>
-        <div class="add-mark display-flex align-items-center justify-content-between">
-            <input class="input-digit" type="text" name="mark" placeholder="marcador">
-            <button type="submit" class="button-green">Register</button>
-        </div>
+        <form action="{{ route('create-mark') }}" method="GET">
+            <div class="add-mark display-flex align-items-center justify-content-between">
+                <input class="input-digit" type="text" name="name" placeholder="marcador">
+                <button type="submit" class="button-green">Register</button>
+            </div>
+        </form>
         <p>*Limite de 30 caracteres</p>
     </div>
 </div>
