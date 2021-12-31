@@ -9,7 +9,7 @@
     <div class="content-center display-flex align-items-center justify-content-center">
         <div class="display-flex align-items-start justify-content-center">
             <div class="form-input display-flex justify-content-center align-items-center">
-                <form>
+                <form method="POST">
                     <div class="display-flex flex-direction-column align-items-start justify-content-center">
                         <h2>Sing Up</h2>
                         <input class="input-digit" type="text" name="username" placeholder="username">

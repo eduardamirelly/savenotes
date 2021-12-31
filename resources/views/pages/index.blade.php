@@ -18,7 +18,9 @@
                 <div id="menu">
                     <div id="name_menu">Menu</div>
                     <ul class="display-flex align-items-center justify-content-end">
-                        <li><a href="#"><img src="./images/user.png" alt="user">Login</a></li>
+                        
+                        <li><a href="{{ route('login') }}"><img src="./images/user.png" alt="user">Login</a></li>
+                        <li><a href="{{ route('register') }}"><img src="./images/user.png" alt="user">Register</a></li>
                         <li><a href="#"><img src="./images/info.png" alt="info">About</a></li>
                     </ul>
                 </div>

@@ -272,6 +272,10 @@ footer p:nth-child(3){
     width: 1.5rem;
 }
 
+main{
+    width: 100%;
+}
+
 .notes{
     margin: 40px 0px;
     columns: 4;
@@ -412,6 +416,7 @@ footer p:nth-child(3){
 
 .modal .controls{
     align-self: flex-end;
+    margin-bottom: 10px;
 }
 
 .modal .controls .circle a{
