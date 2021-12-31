@@ -146,6 +146,7 @@ section h2{
 
 .content-center .form-input form h2{
     color: var(--light-yellow);
+    margin-bottom: 15px;
 }
 
 .content-center .form-input p{
