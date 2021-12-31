@@ -4,6 +4,10 @@
 
 @section('content')
 
+    <div>
+        <p></p>
+    </div>
+
     <!-- CONTENT NOTES AREA -->
 
     <div class="content display-flex flex-direction-column align-items-center justify-content-between">
@@ -22,8 +26,14 @@
                             <li><a href="#"><img src="./images/user.png" alt="user">{{ $user->name }}</a></li>
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
-                                <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
-                                    this.closest('form').submit();"><img src="./images/logout.png" alt="user">Logout</a></li>
+                                <li>
+                                    <a 
+                                        href="{{ route('logout') }}" onclick="event.preventDefault();
+                                        this.closest('form').submit();">
+                                        <img src="./images/logout.png" alt="user">
+                                        Logout
+                                    </a>
+                                </li>
                             </form>
                         </ul>
                     </div>
@@ -60,88 +70,17 @@
 
         <main>
             <div class="notes">
-                <div class="note-item dark-green display-flex flex-direction-column">
-                    <a id="delete-note" href="#"><img src="./images/trash.png" alt="trash"></a>
-                    <h3>Título da Anotação</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id dolor dolor. Donec iaculis lacus ac enim posuere, ut euismod ipsum accumsan. Vestibulum magna massa, fermentum vitae orci ut, suscipit.</p>
-                    <div class="marks-note">
-                        <p href="#">Marcador</p>
-                        <p href="#">Marcador</p>
+                @foreach ($notes as $note)
+                    <div class="note-item dark-green display-flex flex-direction-column">
+                        <a id="delete-note" href="{{ route('delete-note', ['id' => $note->id]) }}"><img src="./images/trash.png" alt="trash"></a>
+                        <h3>{{ $note->title }}</h3>
+                        <p>{{ $note->content }}</p>
+                        <div class="marks-note">
+                            <p href="#">Marcador</p>
+                        </div>
                     </div>
-                </div>
-                <div class="note-item medium-green display-flex flex-direction-column">
-                    <a id="delete-note" href="#"><img src="./images/trash.png" alt="trash"></a>
-                    <h3>Título da Anotação</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id dolor dolor. Donec iaculis lacus ac enim posuere, ut euismod ipsum accumsan. Vestibulum magna massa, fermentum vitae orci ut, suscipit.</p>
-                </div>
-                <div class="note-item yellow display-flex flex-direction-column">
-                    <a id="delete-note" href="#"><img src="./images/trash.png" alt="trash"></a>
-                    <h3>Título da Anotação</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis lacus at justo volutpat luctus vitae laoreet urna. Nulla ac enim volutpat, porta tellus non, efficitur magna. Duis faucibus sodales elementum. In sed efficitur mi. Phasellus laoreet magna id sodales semper. Nunc ac risus facilisis leo porttitor placerat. Fusce quam. </p>
-                    <div class="marks-note">
-                        <p href="#">Marcador</p>
-                        <p href="#">Marcador</p>
-                    </div>
-                </div>
-                <div class="note-item yellow display-flex flex-direction-column">
-                    <a id="delete-note" href="#"><img src="./images/trash.png" alt="trash"></a>
-                    <h3>Título da Anotação</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis lacus at justo volutpat luctus vitae laoreet urna. Nulla ac enim volutpat, porta tellus non, efficitur magna. Duis faucibus sodales elementum. In sed efficitur mi. Phasellus laoreet magna id sodales semper. Nunc ac risus facilisis leo porttitor placerat. Fusce quam .</p>
-                </div>
-                <div class="note-item orange display-flex flex-direction-column">
-                    <a id="delete-note" href="#"><img src="./images/trash.png" alt="trash"></a>
-                    <h3>Título da Anotação</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id dolor dolor. Donec iaculis lacus ac enim posuere, ut euismod ipsum accumsan. Vestibulum magna massa, fermentum vitae orci ut, suscipit.</p>
-                    <div class="marks-note">
-                        <p href="#">Marcador</p>
-                        <p href="#">Marcador</p>
-                    </div>
-                </div>
-                <div class="note-item dark-green display-flex flex-direction-column">
-                    <a id="delete-note" href="#"><img src="./images/trash.png" alt="trash"></a>
-                    <h3>Título da Anotação</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id dolor dolor. Donec iaculis lacus ac enim posuere, ut euismod ipsum accumsan. Vestibulum magna massa, fermentum vitae orci ut, suscipit.</p>
-                    <div class="marks-note">
-                        <p href="#">Marcador</p>
-                        <p href="#">Livros, filmes e séries</p>
-                    </div>
-                </div>
-                <div class="note-item dark-green display-flex flex-direction-column">
-                    <a id="delete-note" href="#"><img src="./images/trash.png" alt="trash"></a>
-                    <h3>Título da Anotação</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id dolor dolor. Donec iaculis lacus ac enim posuere, ut euismod ipsum accumsan. Vestibulum magna massa, fermentum vitae orci ut, suscipit.</p>
-                    <div class="marks-note">
-                        <p href="#">Marcador</p>
-                        <p href="#">Livros, filmes e séries</p>
-                    </div>
-                </div>
-                <div class="note-item dark-green display-flex flex-direction-column">
-                    <a id="delete-note" href="#"><img src="./images/trash.png" alt="trash"></a>
-                    <h3>Título da Anotação</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id dolor dolor. Donec iaculis lacus ac enim posuere, ut euismod ipsum accumsan. Vestibulum magna massa, fermentum vitae orci ut, suscipit.</p>
-                    <div class="marks-note">
-                        <p href="#">Marcador</p>
-                        <p href="#">Livros, filmes e séries</p>
-                    </div>
-                </div>
-                <div class="note-item dark-green display-flex flex-direction-column">
-                    <a id="delete-note" href="#"><img src="./images/trash.png" alt="trash"></a>
-                    <h3>Título da Anotação</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id dolor dolor. Donec iaculis lacus ac enim posuere, ut euismod ipsum accumsan. Vestibulum magna massa, fermentum vitae orci ut, suscipit.</p>
-                    <div class="marks-note">
-                        <p href="#">Marcador</p>
-                        <p href="#">Livros, filmes e séries</p>
-                    </div>
-                </div>
-                <div class="note-item dark-green display-flex flex-direction-column">
-                    <a id="delete-note" href="#"><img src="./images/trash.png" alt="trash"></a>
-                    <h3>Título da Anotação</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id dolor dolor. Donec iaculis lacus ac enim posuere, ut euismod ipsum accumsan. Vestibulum magna massa, fermentum vitae orci ut, suscipit.</p>
-                    <div class="marks-note">
-                        <p href="#">Marcador</p>
-                        <p href="#">Livros, filmes e séries</p>
-                    </div>
-                </div>
+                @endforeach
+                
             </div>
         </main>
 
@@ -153,71 +92,13 @@
 
     <!-- MODAL EDIT/CREATE NOTE -->
 
-    <div id="modal-note" class="modal-container display-flex flex-direction-column align-items-center justify-content-center">
-        <div class="colors display-flex align-items-center">
-            <div onclick="ChangeColor('c-d-green')" id="c-d-green" class="dark-green"><img src="./images/button_x.png" alt="x"></div>
-            <div onclick="ChangeColor('c-m-green')" id="c-m-green" class="medium-green hidden"><img src="./images/button_x.png" alt="x"></div>
-            <div onclick="ChangeColor('c-yellow')" id="c-yellow" class="yellow hidden"><img src="./images/button_x.png" alt="x"></div>
-            <div onclick="ChangeColor('c-orange')" id="c-orange" class="orange hidden"><img src="./images/button_x.png" alt="x"></div>
-            <div onclick="ChangeColor('c-red')" id="c-red" class="red hidden"><img src="./images/button_x.png" alt="x"></div>
-        </div>
-        <div id="modal-note-content" class="modal dark-green display-flex flex-direction-column">
-            <div class="controls display-flex">
-                <div class="circle">
-                    <a href="#"><img src="./images/trash.png" alt="trash"></a>
-                </div>
-                <div class="circle">
-                    <a href="#" id="close"><img src="./images/button_x.png" alt="x"></a>
-                </div>
-            </div>
-            <div class="title">
-                <textarea name="input-title" id="textarea-title" rows="1" placeholder="Title"></textarea>
-            </div>
-            <div class="text">
-                <textarea name="input-text" id="textarea-text" rows="1" placeholder="Text"></textarea>
-            </div>
-            <div class="marks display-flex align-items-center">
-                <p href="#" class="display-flex align-items-center">Marcador<img src="./images/button_x.png" alt="x"></p>
-                <p href="#" class="display-flex align-items-center">Marcador<img src="./images/button_x.png" alt="x"></p>
-                <p href="#" class="display-flex align-items-center">Marcador<img src="./images/button_x.png" alt="x"></p>
-                <p href="#" class="display-flex align-items-center">Marcador<img src="./images/button_x.png" alt="x"></p>
-                <p href="#" class="display-flex align-items-center">Marcador<img src="./images/button_x.png" alt="x"></p>
-                <p href="#" class="display-flex align-items-center">Marcador<img src="./images/button_x.png" alt="x"></p>
-                <p href="#" class="display-flex align-items-center">Marcador<img src="./images/button_x.png" alt="x"></p>
-                <p href="#" class="display-flex align-items-center">Marcador<img src="./images/button_x.png" alt="x"></p>
-                <p href="#" class="display-flex align-items-center">Marcador<img src="./images/button_x.png" alt="x"></p>
-                <p href="#" class="display-flex align-items-center">Marcador<img src="./images/button_x.png" alt="x"></p>
-                <a href="#" class="display-flex align-items-center"><img src="./images/plus.png" alt="plus">Novo Marcador</a>
-            </div>
-            <div class="edit-note">
-                <p>Editado em {dia} de {mês} de {ano}</p>
-            </div>
-        </div>
-    </div>
+    @extends('modais.modal-note')
 
     <!-- END MODAL EDIT/CREATE NOTE -->
 
     <!-- MODAL MARK -->
 
-    <div id="modal-mark" class="modal-container display-flex display-flex flex-direction-column align-items-center justify-content-center">
-        <div class="modal display-flex flex-direction-column">
-            <div class="controls display-flex justify-content-end">
-                <div class="circle">
-                    <a href="#"><img src="./images/trash.png" alt="trash"></a>
-                </div>
-                <div class="circle">
-                    <a href="#" id="close-mark"><img src="./images/button_x.png" alt="x"></a>
-                </div>
-            </div>
-            <h2>Criar novo marcador</h2>
-            <div class="add-mark display-flex align-items-center justify-content-between">
-                <input class="input-digit" type="text" name="mark" placeholder="marcador">
-                <button type="submit" class="button-green">Register</button>
-            </div>
-            <p>*Limite de 30 caracteres</p>
-        </div>
-
-    </div>
+    @extends('modais.modal-mark')
 
     <!-- END MODAL MARK -->
 
